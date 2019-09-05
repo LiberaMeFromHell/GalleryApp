@@ -1,14 +1,12 @@
 package com.example.galleryapp.view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.galleryapp.PreviewFragment;
 import com.example.galleryapp.R;
 import com.example.galleryapp.model.ImageContainer;
 

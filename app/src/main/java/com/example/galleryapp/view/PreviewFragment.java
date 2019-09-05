@@ -1,4 +1,4 @@
-package com.example.galleryapp;
+package com.example.galleryapp.view;
 
 
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.galleryapp.R;
 
 
 /**
@@ -35,8 +36,7 @@ public class PreviewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_preview, container, false);
 
         ImageView imageView = view.findViewById(R.id.previewImage);
-        if (imageView == null)
-            Log.e("OSfrog","its null");
+
         Glide.with(getActivity())
                 .load(imageUri)
                 .into(imageView);

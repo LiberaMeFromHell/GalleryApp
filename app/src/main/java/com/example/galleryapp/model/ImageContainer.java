@@ -78,14 +78,13 @@ public class ImageContainer {
         preferences = PreferenceManager.getDefaultSharedPreferences(application.getApplicationContext());
         String str = preferences.getString("EXCLUDED", null);
         if (str != null) {
-            Log.d("Share load: " + application.toString(), str.toString());
             StringTokenizer sT = new StringTokenizer(str, ",");
 
             for (int i = 0; i < sT.countTokens(); i++) {
                 excludedSet.add(Integer.parseInt(sT.nextToken()));
             }
         } else {
-            Log.d("Share load: " + application.toString(), "its null in your eyes");
+            Log.d("Share load: " + application.toString(), "it's null");
         }
 
     }
@@ -94,7 +93,6 @@ public class ImageContainer {
 
         if (excludedSet != null && excludedSet.size() > 0)
             for (Integer i: excludedSet) {
-                Log.d("Filter", "filterImages: " + i);
                 imageMap.remove(i);
             }
     }
@@ -109,7 +107,6 @@ public class ImageContainer {
         }
 
         editor.putString("EXCLUDED", str.toString());
-        Log.d("Share save: " + activity.toString(), str.toString());
         editor.commit();
     }
 
@@ -117,7 +114,6 @@ public class ImageContainer {
 
         excludedSet.add(_id);
         for (Integer id : excludedSet) {
-            Log.d(TAG, "excludeImage: " + id);
         }
         initImageMap(application);
     }

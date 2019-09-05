@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.galleryapp.PreviewFragment;
 import java.util.Map;
 import java.util.SortedMap;
 
